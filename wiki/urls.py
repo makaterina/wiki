@@ -1,3 +1,6 @@
+from django.urls import path
+from encyclopedia import views
+
 """wiki URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,5 +21,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("search", views.search, name="search"),
     path('', include("encyclopedia.urls"))
 ]
